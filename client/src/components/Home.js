@@ -25,7 +25,8 @@ import {
   Stack,
 } from "@mui/material";
 import { io } from "socket.io-client";
-const socket = io("http://localhost:3001");
+const socket = io(process.env.REACT_APP_SOCKET_URL);
+// const socket = io("http://localhost:3001");
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
